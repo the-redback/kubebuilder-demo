@@ -1,0 +1,7 @@
+apiVersion: batch.tutorial.kubebuilder.io/v1beta1
+kind: CronBeta
+metadata:
+  name: cronbeta-sample
+spec:
+  # Add fields here
+  foo: bar
