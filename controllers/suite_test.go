@@ -32,6 +32,7 @@ import (
 
 	batchv1 "github.com/the-redback/kubebuilder-demo/api/v1"
 	batchv1beta1 "github.com/the-redback/kubebuilder-demo/api/v1beta1"
+	batchv2 "github.com/the-redback/kubebuilder-demo/api/v2"
 	// +kubebuilder:scaffold:imports
 )
 
@@ -67,6 +68,9 @@ var _ = BeforeSuite(func(done Done) {
 	Expect(err).NotTo(HaveOccurred())
 
 	err = batchv1beta1.AddToScheme(scheme.Scheme)
+	Expect(err).NotTo(HaveOccurred())
+
+	err = batchv2.AddToScheme(scheme.Scheme)
 	Expect(err).NotTo(HaveOccurred())
 
 	// +kubebuilder:scaffold:scheme
