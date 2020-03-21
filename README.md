@@ -2,25 +2,38 @@
 
 Basic getting started of kubebuilder SDK.
 
-To generate code,
+1. To generate code,
 
 ```bash
 $ make
 ```
 
-To install the CRD,
+2. To install the CRD,
 
 ```bash
 $ make install
 ```
 
-To run controller,
+3. To run controller in Local,
 
 ```bash
 $ make run
 ```
 
-To install sample Crontab custom resource,
+Without webhooks,
+
+```console
+$ make run ENABLE_WEBHOOKS=false
+```
+
+Deploy Controller in cluster,
+
+```bash
+$ make docker-build docker-push IMG=<some-registry>/<project-name>:tag
+$ make deploy IMG=<some-registry>/<project-name>:tag
+```
+
+4. To install sample Crontab custom resource,
 
 ```bash
 $ kubectl apply -f config/samples/
