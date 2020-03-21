@@ -15,8 +15,6 @@ spec:
     plural: cronjobs
     singular: cronjob
   scope: Namespaced
-  subresources:
-    status: {}
   validation:
     openAPIV3Schema:
       description: CronJob is the Schema for the cronjobs API
@@ -6554,6 +6552,9 @@ spec:
   - name: v1
     served: true
     storage: true
+  - name: v2
+    served: true
+    storage: false
 status:
   acceptedNames:
     kind: ""
