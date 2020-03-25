@@ -8,7 +8,6 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/conversion"
 )
 
-
 // ConvertTo converts this CronJob to the Hub version (v1).
 func (src *CronJob) ConvertTo(dstRaw conversion.Hub) error {
 	dst := dstRaw.(*v1.CronJob)
@@ -86,4 +85,3 @@ func (dst *CronJob) ConvertFrom(srcRaw conversion.Hub) error {
 	dst.Status.LastScheduleTime = src.Status.LastScheduleTime
 	return nil
 }
-
