@@ -5,6 +5,7 @@ kind: CustomResourceDefinition
 metadata:
   name: cronjobs.batch.tutorial.kubebuilder.io
 spec:
+  preserveUnknownFields: false
   conversion:
     strategy: Webhook
     webhookClientConfig:
