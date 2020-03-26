@@ -45,7 +45,7 @@ manifests: controller-gen
 
 # Run go fmt against code
 fmt:
-	go fmt ./...
+	goimports -w api controllers main.go
 
 # Run go vet against code
 vet:

@@ -2,8 +2,9 @@ package v2
 
 import (
 	"fmt"
-	v1 "github.com/the-redback/kubebuilder-demo/api/v1"
 	"strings"
+
+	v1 "github.com/the-redback/kubebuilder-demo/api/v1"
 
 	"sigs.k8s.io/controller-runtime/pkg/conversion"
 )
